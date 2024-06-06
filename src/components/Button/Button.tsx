@@ -1,9 +1,15 @@
 import React from 'react';
+import "./Button.scss"
 
-const Button = () => {
+type BtnProps = {
+    title: string;
+    onClick?: () => void;
+}
+
+const Button: React.FC<BtnProps> = ({title, onClick}) => {
     return (
-        <div>
-            
+        <div className="btn" onClick={onClick}>
+            {title}
         </div>
     );
 };

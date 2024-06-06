@@ -1,0 +1,18 @@
+@import "../../../scss/style";
+
+.custom-input {
+  max-width: 339px;
+  height: 36px;
+  padding: 10px 12px 10px 12px;
+  border-radius: 8px;
+  border: 1px solid $totalGreyColor;
+  outline: none;
+  margin-bottom: 12px;
+  &::placeholder {
+    color: $placeholderColor;
+  }
+}
+
+.custom-input::placeholder {
+  color: $placeholderColor;
+}
