@@ -8,6 +8,7 @@ type Props = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder: string;
     required?: boolean;
+
 }
 
 const CustomInput: React.FC<Props> = ({type, name, value, onChange, placeholder, required}) => {

@@ -66,4 +66,34 @@
   &__btn-links-block {
     padding-bottom: 64px;
   }
+  &__password-input {
+    position: relative;
+    max-width: 339px;
+    height: 36px;
+    padding: 10px 12px 10px 12px;
+    border-radius: 8px;
+    border: 1px solid $totalGreyColor;
+    outline: none;
+    margin-bottom: 12px;
+    &::placeholder {
+      color: $placeholderColor;
+    }
+    &:focus {
+      border: 1px solid $btnPurpleColor;
+    }
+  }
+}
+
+.input-visible-btn {
+  position: absolute;
+  z-index: 10;
+  left: 57%;
+  top: 49.5%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  background: inherit;
 }

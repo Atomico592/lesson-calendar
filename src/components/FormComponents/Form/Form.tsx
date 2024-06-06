@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import CustomInput from "../CustomInput/CustomInput.tsx";
 import Logo from "../../Logo/Logo.tsx";
 import Button from "../../Button/Button.tsx";
+import icon from "../../../assets/icons/icon.png";
 import "./Form.scss"
 
 interface FormComponent {
@@ -16,6 +17,8 @@ interface Props {
 
 const Form: React.FC<Props> = ({title}) => {
     const [formState, setFormState] = useState<FormComponent>({email: "", password: "", checkbox: false})
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
     const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const {name, value} = e.target;
         setFormState(prev => ({...prev, [name]: value}));
@@ -24,6 +27,10 @@ const Form: React.FC<Props> = ({title}) => {
     const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const {name, checked} = e.target;
         setFormState(prev => ({...prev, [name]: checked}));
+    };
+
+    const togglePasswordVisibility = () => {
+        setIsPasswordVisible(!isPasswordVisible);
     };
     console.log(formState)
     return (
@@ -45,14 +52,18 @@ const Form: React.FC<Props> = ({title}) => {
                             required={true}
                             onChange={inputChangeHandler}
                         />
-                        <CustomInput
-                            type="text"
+                        <input
+                            className="form__password-input"
+                            type={isPasswordVisible ? 'text' : 'password'}
                             name="password"
                             placeholder="Пароль"
                             value={formState.password}
                             required={true}
                             onChange={inputChangeHandler}
                         />
+                        <button className="input-visible-btn" type="button" onClick={togglePasswordVisibility}>
+                            <img src={icon} alt="visible-icon"/>
+                        </button>
                         <label className="form__input-block-label">
                             <input
                                 type="checkbox"
@@ -65,7 +76,7 @@ const Form: React.FC<Props> = ({title}) => {
                     </div>
                     <div className="form__btn-links-block">
                         <div className="form__btn-wrapper">
-                            <Button title="Войти"></Button>
+                        <Button title="Войти"></Button>
                         </div>
                         <div className="form__links">
                             <span className="form__links-styles">Я забыл пароль</span>

@@ -11,8 +11,7 @@
   &::placeholder {
     color: $placeholderColor;
   }
-}
-
-.custom-input::placeholder {
-  color: $placeholderColor;
+  &:focus {
+    border: 1px solid $btnPurpleColor;
+  }
 }
