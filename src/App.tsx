@@ -1,9 +1,12 @@
-import Login from "./containers/Login/Login.tsx";
+// import Login from "./containers/Login/Login.tsx";
+import AdvertisingBanner from "./components/AdvertisingBanner/AdvertisingBanner.tsx";
+
 
 const App = () => {
     return (
         <div>
-            <Login/>
+            {/*<Login/>*/}
+            <AdvertisingBanner/>
         </div>
     );
 };

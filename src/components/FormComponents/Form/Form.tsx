@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import CustomInput from "../CustomInput/CustomInput.tsx";
-import Logo from "../../Logo/Logo.tsx";
-import Button from "../../Button/Button.tsx";
+import Logo from "../../UI/Logo/Logo.tsx";
+import Button from "../../UI/Button/Button.tsx";
 import icon from "../../../assets/icons/icon.png";
 import "./Form.scss"
 

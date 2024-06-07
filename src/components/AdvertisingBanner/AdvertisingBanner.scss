@@ -1,0 +1,39 @@
+@import "../../scss/style";
+
+.advertising-banner {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 196px;
+  height: 128px;
+  border-radius: 15px;
+  font-family: "Circe Rounded", sans-serif;
+  background: $totalPageColor url("../../assets/gift.png") no-repeat 100% 100%;
+  padding: 16px;
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    padding-bottom: 4px;
+  }
+  &__content {
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 12px;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  &__btn {
+    width: 68px;
+    height: 32px;
+    padding: 8px 16px 8px 16px;
+    border: none;
+    border-radius: 15px;
+    background-color: $brightBlueForButtons;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.2px;
+    color: $textBlueColor;
+  }
+}
