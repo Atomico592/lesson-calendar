@@ -35,5 +35,10 @@
     font-weight: 400;
     line-height: 16.2px;
     color: $textBlueColor;
+    cursor: pointer;
+    &:hover {
+      background-color: $btnPurpleColor;
+      color: #FFFFFF;
+    }
   }
 }

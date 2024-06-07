@@ -1,0 +1,14 @@
+@import "../../scss/style";
+
+.side-bar {
+  width: 236px;
+  height: 704px;
+  border-radius: 30px;
+  background: $sideBarPurpleColor;
+  &__logo-wrapper {
+    padding: 44px;
+  }
+  &__advertising-banner-wrapper {
+    padding: 20px;
+  }
+}
